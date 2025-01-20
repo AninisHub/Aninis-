@@ -1,0 +1,399 @@
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #8e44ad;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+    margin: 10px auto;
+  }
+  
+  /* Expertise Cards */
+  .expertise-card {
+    perspective: 1000px; /* Enables 3D rotation */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .expertise-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    background: linear-gradient(145deg, #2d2d44, #1c1c29);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .expertise-card:hover .card-content {
+    background: linear-gradient(145deg, #8e44ad, #3498db);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon {
+    font-size: 3.5rem;
+    color: #8e44ad;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease, color 0.4s ease;
+  }
+  
+  .expertise-card:hover .icon {
+    transform: rotate(360deg);
+    color: #ffffff;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: #dcdcdc;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .expertise-card {
+      margin-bottom: 20px;
+    }
+  
+    .icon {
+      font-size: 2.5rem;
+    }
+  
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Work Experience Section */
+.work-experience-section {
+  background: linear-gradient(to bottom, #2d2d44, #1c1c29);
+  color: white;
+  padding: 50px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 40px;
+}
+
+/* Experience Grid */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Card Design */
+.experience-card {
+  background: linear-gradient(145deg, #2d2d44, #1c1c29);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon Styling */
+.icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.icon img:not([src]) {
+  display: none; /* Fallback for missing icons */
+}
+
+/* Content Styling */
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* Contact Section */
+.contact-section {
+  background: #20232a;
+  color: #ffffff;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #61dafb;
+  margin: 10px auto;
+  display: block;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: #c4c4c4;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  background: #282c34;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #3b4049;
+  color: #ffffff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form .submit-btn {
+  background: #61dafb;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background: #21a1f1;
+}
+
+/* Contact Information */
+.contact-info {
+  flex: 1;
+  background: #1c1e23;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-item i {
+  font-size: 1.8rem;
+  color: #61dafb;
+  margin-right: 15px;
+}
+
+.info-item p,
+.info-item a {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-right: 15px;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Decorative Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.floating-elements .floating-circle {
+  width: 100px;
+  height: 100px;
+  background: rgba(97, 218, 251, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.floating-elements .floating-diamond {
+  width: 80px;
+  height: 80px;
+  background: rgba(97, 218, 251, 0.3);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 25%;
+  right: 20%;
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
